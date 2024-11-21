@@ -135,7 +135,7 @@ const NavBar = () => {
             <div className="logo">
               <Link href="/">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt="logo"
                   width={150}
                   height={25}
