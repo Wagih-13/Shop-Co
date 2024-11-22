@@ -4,6 +4,7 @@ import ProductCard from "../productCard/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Virtual } from "swiper/modules";
 import MainBtn from "../buttons/MainBtn";
+import { motion } from "framer-motion";
 import "./productsSliderStyle.scss";
 import "swiper/css/virtual";
 import "swiper/css";
@@ -50,7 +51,14 @@ const ProductsSlider: React.FC<ProductsSliderProps> = ({ title, data }) => {
     <>
       <div className="cardsSlider">
         <h2 className="sliderTitle">{title}</h2>
-        <div className="sliderContainer">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.5, type: "tween" }}
+          viewport={{ once: true, amount: 0.7 }}
+          className="sliderContainer"
+        >
           <Swiper
             modules={[Virtual]}
             breakpoints={breakpoints}
@@ -63,7 +71,7 @@ const ProductsSlider: React.FC<ProductsSliderProps> = ({ title, data }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
         <MainBtn
           content="View All "
           background="white"

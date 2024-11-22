@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 import "./productCardStyle.scss";
 import Image from "next/image";
 import SkeletonLoder from "../skeleton/SkeletonLoder";
-import { motion } from "framer-motion";
+
 
 type ProductCardProps = {
   index: number;
@@ -34,12 +34,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
     <>
       {isDataLoaded ? (
         <>
-          <motion.div
-            initial={{ opacity: 0, scale: 0, y: 50, x: 10 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1, x: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.3, type: "tween", delay: index * 0.08 }}
-            viewport={{ once: true, amount: 0.7 }}
+          <div
+           
             className="card"
             onClick={(e) => handleGoToProduct(e)}
           >
@@ -67,7 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
               </span>
               <div className="price">{product.price}</div>
             </div>
-          </motion.div>
+          </div>
         </>
       ) : (
         <SkeletonLoder />
