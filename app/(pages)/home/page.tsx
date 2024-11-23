@@ -5,6 +5,7 @@ import NewArrivals from "./ui/newArrivals/NewArrivals";
 import TopSelling from "./ui/topSelling/TopSelling";
 import "./style.scss";
 import BrowseByCategory from "./ui/browseByCategory/BrowseByCategory";
+import ReviwsSlider from "@/app/components/reviwsSlider/ReviwsSlider";
 
 const HomePage = () => {
   console.log(process.env.NEXT_PUBLIC_BASE_URL);
@@ -26,6 +27,7 @@ const HomePage = () => {
       <div className="container">
         <BrowseByCategory />
       </div>
+      <ReviwsSlider />
     </>
   );
 };

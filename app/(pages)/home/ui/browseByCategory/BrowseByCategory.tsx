@@ -1,10 +1,12 @@
 import Image from "next/image";
 import "./browseByCategoryStyle.scss";
+
 const BrowseByCategory = async () => {
   const data = await fetch("https://fakestoreapi.com/products/categories", {
     cache: "force-cache",
   });
   const categories = await data.json();
+
   return (
     <>
       <div className="browseByCategory">

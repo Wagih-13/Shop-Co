@@ -42,7 +42,7 @@ const ProductsSlider: React.FC<ProductsSliderProps> = ({ title, data }) => {
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 6,
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   };
@@ -77,7 +77,7 @@ const ProductsSlider: React.FC<ProductsSliderProps> = ({ title, data }) => {
           background="white"
           border="1px solid #f0f0f0"
           fontSize="$xlFont"
-          color="$blackColor"
+          color="black"
         />
       </div>
     </>

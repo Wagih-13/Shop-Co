@@ -39,3 +39,11 @@ h6,
 p {
   margin: 0px;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}

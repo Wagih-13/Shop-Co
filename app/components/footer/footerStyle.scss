@@ -1,0 +1,99 @@
+// include the styles variables
+@use "../../sass/variabels" as *;
+// include the styles mixin
+@use "../../sass/mixin" as *;
+// include the styles placeholder
+@use "../../sass/pleacholder" as *;
+
+.footer {
+  background-color: $mainColor;
+  padding: 20px 0px;
+  margin-top: 200px;
+  .container {
+    @include flexBox(center, center, 30px, column);
+    .subscribeBox {
+      width: 90%;
+      margin: 0px auto;
+      padding: 30px;
+      transform: translateY(-60%);
+      -webkit-transform: translateY(-60%);
+      -moz-transform: translateY(-60%);
+      -ms-transform: translateY(-60%);
+      -o-transform: translateY(-60%);
+      @include borderBox(none, 20px);
+      background-color: $secondaryColor;
+      @include flexBox(space-between, center, 20px);
+      & > h2 {
+        color: $whiteColor;
+        @extend %headeTitle;
+        margin-bottom: 10px;
+        width: 50%;
+        white-space: wrap;
+        line-height: 1;
+      }
+      form {
+        width: 350px;
+        @include flexBox(center, center, 20px, column);
+        .inputBox {
+          width: 100%;
+          background-color: $whiteColor;
+          @include borderBox(none, 20px);
+          @include flexBox(flex-start, center, 0px);
+          overflow: hidden;
+          svg {
+            font-size: $iconFont;
+            margin: 0px 10px;
+            color: #919191;
+          }
+          input {
+            flex: 1;
+            padding: 15px 5px;
+            font-size: $mFont;
+            border: none;
+          }
+        }
+        button {
+          padding: 15px 20px;
+          border: none;
+          background-color: $whiteColor;
+          color: $blackColor;
+          font-size: $mFont;
+          width: 100%;
+          cursor: pointer;
+          @include borderBox(none, 20px);
+        }
+      }
+    }
+    .footerLinks {
+      margin-top: -100px;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+    }
+    .copyRights {
+      width: 100%;
+      border-top: 1px solid $grayColor;
+      padding: 10px 0px;
+
+      @include flexBox(space-between, flex-start, 20px);
+      & > div {
+        margin: 0px;
+        padding: 0px;
+        height: min-content;
+      }
+    }
+  }
+}
+
+@media ($laptopScreen) {
+  .subscribeBox {
+    @include flexBox(center, center, 20px, column, !important);
+    form {
+      width: 100% !important;
+    }
+    & > h2 {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+}

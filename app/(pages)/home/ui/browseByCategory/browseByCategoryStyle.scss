@@ -7,9 +7,10 @@
 
 .browseByCategory {
   width: 100%;
-  padding: 50px;
+  padding: 30px;
   background-color: $mainColor;
-  @include borderBox(none, 20px);
+  @include borderBox(none, 10px);
+  margin: 50px 0px;
   .mainTitel {
     text-align: center;
     color: $blackColor;
@@ -49,8 +50,7 @@
 
 @media #{$laptopScreen} {
   .browseByCategory {
-    padding: 30px !important;
-
+    padding: 20px !important;
     .categories {
       grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)) !important;
       div:nth-child(1) {

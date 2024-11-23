@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 import "./productCardStyle.scss";
 import Image from "next/image";
 import SkeletonLoder from "../skeleton/SkeletonLoder";
-
+import { animate, motion } from "framer-motion";
 
 type ProductCardProps = {
   index: number;
@@ -16,6 +16,7 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const favoriteIconRef = useRef<HTMLDivElement>(null);
   const isDataLoaded = true; // TODO : this line for testing only
   const handleToggleFavorite = () => {
@@ -29,28 +30,51 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
     )
       return;
   };
+  const secondPhoto = useRef(null);
 
   return (
     <>
       {isDataLoaded ? (
         <>
-          <div
-           
-            className="card"
-            onClick={(e) => handleGoToProduct(e)}
-          >
-            <div className="image">
-              <div
-                className="favoritIcon"
-                ref={favoriteIconRef}
-                onClick={handleToggleFavorite}
-              >
-                {isFavorite ? <IoHeart /> : <IoMdHeartEmpty />}
+          <div className="productCard" onClick={(e) => handleGoToProduct(e)}>
+            <div
+              className="image"
+              onMouseEnter={() => {
+                setIsHovered(true);
+                animate(secondPhoto.current, { opacity: 1 }, { duration: 0.3 });
+              }}
+              onMouseLeave={() => {
+                setIsHovered(true);
+                animate(secondPhoto.current, { opacity: 0 }, { duration: 0.3 });
+              }}
+            >
+              <aside className="actionsBar">
+                <div
+                  className="favoritIcon"
+                  ref={favoriteIconRef}
+                  onClick={handleToggleFavorite}
+                >
+                  {isFavorite ? <IoHeart /> : <IoMdHeartEmpty />}
+                </div>
+              </aside>
+
+              <div className="addToCartButton">
+                <button>Add To Cart</button>
               </div>
+
               <Image
+                className="firstPhoto"
                 width={295}
                 height={300}
-                src={product?.image}
+                src="/images/image 2.webp"
+                alt="product"
+              />
+              <Image
+                className="secondPhoto"
+                ref={secondPhoto}
+                width={295}
+                height={300}
+                src="/images/image 3.webp"
                 alt="product"
               />
             </div>
@@ -61,7 +85,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                 <FaStar />
                 <FaStar />
               </span>
-              <div className="price">{product.price}</div>
+              <div className="price">
+                <span className="afterSale">{product.price} EGP</span>
+                <span className="beforSale">{product.price} EGP</span>
+                <span className="salePecanteage">-20%</span>
+              </div>
             </div>
           </div>
         </>

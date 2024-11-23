@@ -3,11 +3,11 @@ import { Cairo } from "next/font/google";
 import NavBar from "./components/NavBar/NavBar";
 import "./globals.css";
 import "./globalStyle.scss";
+import Footer from "./components/footer/Footer";
 
 const cairo = Cairo({
   subsets: ["arabic"], // Specify the necessary subsets
 });
-
 
 export const metadata: Metadata = {
   title: "Shop-Co",
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={`${cairo.className} `}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

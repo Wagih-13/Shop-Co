@@ -449,6 +449,14 @@ p {
   margin: 0px;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./app/globalStyle.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -480,5 +488,151 @@ p {
 @media (min-width: 1401px) {
   .container {
     max-width: 1350px !important;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./app/components/footer/footerStyle.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.footer .container .subscribeBox > h2 {
+  font-size: 48px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .footer .container .subscribeBox > h2 {
+    font-size: 42px !important;
+  }
+}
+@media (max-width: 480px) {
+  .footer .container .subscribeBox > h2 {
+    font-size: 30px !important;
+  }
+}
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0px;
+  margin-top: 200px;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer .container .subscribeBox {
+  width: 90%;
+  margin: 0px auto;
+  padding: 30px;
+  transform: translateY(-60%);
+  -webkit-transform: translateY(-60%);
+  -moz-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  -o-transform: translateY(-60%);
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.footer .container .subscribeBox > h2 {
+  color: white;
+  margin-bottom: 10px;
+  width: 50%;
+  white-space: wrap;
+  line-height: 1;
+}
+.footer .container .subscribeBox form {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .container .subscribeBox form .inputBox {
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+  overflow: hidden;
+}
+.footer .container .subscribeBox form .inputBox svg {
+  font-size: 23px;
+  margin: 0px 10px;
+  color: #919191;
+}
+.footer .container .subscribeBox form .inputBox input {
+  flex: 1 1;
+  padding: 15px 5px;
+  font-size: 16px;
+  border: none;
+}
+.footer .container .subscribeBox form button {
+  padding: 15px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.footer .container .footerLinks {
+  margin-top: -100px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.footer .container .copyRights {
+  width: 100%;
+  border-top: 1px solid rgb(143, 143, 143);
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.footer .container .copyRights > div {
+  margin: 0px;
+  padding: 0px;
+  height: min-content;
+}
+
+@media ((max-width: 1024px)) {
+  .subscribeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: !important;
+    gap: 20px;
+  }
+  .subscribeBox form {
+    width: 100% !important;
+  }
+  .subscribeBox > h2 {
+    width: 100% !important;
+    text-align: center;
   }
 }
