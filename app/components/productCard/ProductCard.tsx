@@ -49,7 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                   );
                 }
               }}
-              onTouchCancel={() => {
+              onTouchEnd={() => {
                 if (window.innerWidth <= 768) {
                   setIsHovered(true);
                   animate(
