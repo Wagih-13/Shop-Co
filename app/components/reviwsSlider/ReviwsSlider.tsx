@@ -7,6 +7,7 @@ import "./reviwsSlider.scss";
 import "swiper/css/virtual";
 import "swiper/css";
 import { FaStar } from "react-icons/fa";
+import { Fragment } from "react";
 
 const ReviwsSlider = () => {
   const slides = Array(10)
@@ -82,7 +83,7 @@ const ReviwsSlider = () => {
             grabCursor={true}
           >
             {slides?.map((slideContent, index) => {
-              return <>{slideContent}</>;
+              return <Fragment key={index}>{slideContent}</Fragment>;
             })}
           </Swiper>
         </motion.div>
