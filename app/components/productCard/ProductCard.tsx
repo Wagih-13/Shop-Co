@@ -40,20 +40,44 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
             <div
               className="image"
               onMouseEnter={() => {
-                setIsHovered(true);
-                animate(secondPhoto.current, { opacity: 1 }, { duration: 0.3 });
+                if (window.innerWidth >= 769) {
+                  setIsHovered(true);
+                  animate(
+                    secondPhoto.current,
+                    { opacity: 1 },
+                    { duration: 0.3 }
+                  );
+                }
               }}
               onTouchCancel={() => {
-                setIsHovered(true);
-                animate(secondPhoto.current, { opacity: 0 }, { duration: 0.3 });
+                if (window.innerWidth <= 768) {
+                  setIsHovered(true);
+                  animate(
+                    secondPhoto.current,
+                    { opacity: 0 },
+                    { duration: 0.3 }
+                  );
+                }
               }}
               onTouchStart={() => {
-                setIsHovered(true);
-                animate(secondPhoto.current, { opacity: 1 }, { duration: 0.3 });
+                if (window.innerWidth <= 768) {
+                  setIsHovered(true);
+                  animate(
+                    secondPhoto.current,
+                    { opacity: 1 },
+                    { duration: 0.3 }
+                  );
+                }
               }}
               onMouseLeave={() => {
-                setIsHovered(true);
-                animate(secondPhoto.current, { opacity: 0 }, { duration: 0.3 });
+                if (window.innerWidth >= 769) {
+                  setIsHovered(true);
+                  animate(
+                    secondPhoto.current,
+                    { opacity: 0 },
+                    { duration: 0.3 }
+                  );
+                }
               }}
             >
               <aside className="actionsBar">
