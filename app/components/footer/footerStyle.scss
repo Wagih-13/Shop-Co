@@ -23,7 +23,7 @@
         @extend %headeTitle;
         margin-bottom: 10px;
         width: 50%;
-        white-space: wrap;
+        white-space: wrap !important;
         line-height: 1;
       }
       form {
@@ -136,7 +136,7 @@
 @media ($tabletScreen) {
   .subscribeBox {
     & > h2 {
-      white-space: wrap;
+      white-space: wrap !important;
     }
   }
   .footerLinks {
