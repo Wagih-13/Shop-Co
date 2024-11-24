@@ -43,6 +43,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                 setIsHovered(true);
                 animate(secondPhoto.current, { opacity: 1 }, { duration: 0.3 });
               }}
+              onTouchCancel={() => {
+                setIsHovered(true);
+                animate(secondPhoto.current, { opacity: 0 }, { duration: 0.3 });
+              }}
+              onTouchStart={() => {
+                setIsHovered(true);
+                animate(secondPhoto.current, { opacity: 1 }, { duration: 0.3 });
+              }}
               onMouseLeave={() => {
                 setIsHovered(true);
                 animate(secondPhoto.current, { opacity: 0 }, { duration: 0.3 });
