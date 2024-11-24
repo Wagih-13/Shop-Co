@@ -369,9 +369,9 @@
     display: none !important;
   }
 }
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Cairo","arguments":[{"subsets":["arabic"]}],"variableName":"cairo"} ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Cairo","arguments":[{"subsets":["arabic"]}],"variableName":"cairo"} ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* arabic */
 @font-face {
   font-family: 'Cairo';
@@ -550,7 +550,7 @@ button:focus {
   color: white;
   margin-bottom: 10px;
   width: 50%;
-  white-space: wrap;
+  white-space: wrap !important;
   line-height: 1;
 }
 .footer .container .subscribeBox form {
@@ -681,7 +681,9 @@ button:focus {
 }
 @media ( (max-width: 768px)) {
   .subscribeBox > h2 {
-    white-space: wrap;
+    width: 100% !important;
+    text-align: center;
+    white-space: wrap !important;
   }
   .footerLinks {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
