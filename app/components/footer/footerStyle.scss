@@ -136,6 +136,8 @@
 @media ($tabletScreen) {
   .subscribeBox {
     & > h2 {
+      width: 100% !important;
+      text-align: center;
       white-space: wrap !important;
     }
   }
