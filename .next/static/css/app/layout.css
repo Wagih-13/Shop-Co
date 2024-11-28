@@ -550,7 +550,7 @@ button:focus {
   color: white;
   margin-bottom: 10px;
   width: 50%;
-  white-space: wrap;
+  white-space: wrap !important;
   line-height: 1;
 }
 .footer .container .subscribeBox form {
@@ -681,7 +681,9 @@ button:focus {
 }
 @media ( (max-width: 768px)) {
   .subscribeBox > h2 {
-    white-space: wrap;
+    width: 100% !important;
+    text-align: center;
+    white-space: wrap !important;
   }
   .footerLinks {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;

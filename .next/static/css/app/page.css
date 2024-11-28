@@ -218,6 +218,8 @@
 .rightSideSec > img {
   width: auto;
   height: 100%;
+  position: relative;
+  bottom: 0px;
   object-fit: contain;
   transform: translateY(15px);
   -webkit-transform: translateY(15px);
