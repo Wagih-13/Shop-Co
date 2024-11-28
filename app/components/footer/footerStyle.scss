@@ -23,7 +23,7 @@
         @extend %headeTitle;
         margin-bottom: 10px;
         width: 50%;
-        white-space: wrap !important;
+        text-wrap: wrap;
         line-height: 1;
       }
       form {
@@ -138,12 +138,12 @@
     & > h2 {
       width: 100% !important;
       text-align: center;
-      white-space: wrap !important;
+
     }
   }
   .footerLinks {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important; 
-    
+
     column-gap: 10px !important;
     row-gap: 20px !important;
     .logoSide {
