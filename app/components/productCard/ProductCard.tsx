@@ -8,6 +8,7 @@ import "./productCardStyle.scss";
 import Image from "next/image";
 import SkeletonLoder from "../skeleton/SkeletonLoder";
 import { animate, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 type ProductCardProps = {
   index: number;
@@ -16,12 +17,12 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
   const favoriteIconRef = useRef<HTMLDivElement>(null);
   const isDataLoaded = true; // TODO : this line for testing only
   const handleToggleFavorite = () => {
     setIsFavorite((prev) => !prev);
   };
+  const router = useRouter();
 
   const handleGoToProduct = (e: MouseEvent<HTMLDivElement>) => {
     if (
@@ -29,7 +30,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
       favoriteIconRef.current.contains(e.target as Node)
     )
       return;
+    router.push(`/product/${Math.random()}`);
   };
+
   const secondPhoto = useRef(null);
 
   return (
@@ -41,7 +44,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
               className="image"
               onMouseEnter={() => {
                 if (window.innerWidth >= 769) {
-                  setIsHovered(true);
                   animate(
                     secondPhoto.current,
                     { opacity: 1 },
@@ -51,7 +53,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
               }}
               onTouchEnd={() => {
                 if (window.innerWidth <= 768) {
-                  setIsHovered(true);
                   animate(
                     secondPhoto.current,
                     { opacity: 0 },
@@ -61,7 +62,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
               }}
               onTouchStart={() => {
                 if (window.innerWidth <= 768) {
-                  setIsHovered(true);
                   animate(
                     secondPhoto.current,
                     { opacity: 1 },
@@ -71,7 +71,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
               }}
               onMouseLeave={() => {
                 if (window.innerWidth >= 769) {
-                  setIsHovered(true);
                   animate(
                     secondPhoto.current,
                     { opacity: 0 },

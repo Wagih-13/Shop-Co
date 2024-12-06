@@ -294,12 +294,6 @@
   width: 100%;
   padding: 30px;
   background-color: #f0f0f0;
-  border: none;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   margin: 50px 0px;
 }
 .browseByCategory .mainTitel {

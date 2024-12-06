@@ -24,9 +24,9 @@ const HomePage = () => {
           <TopSelling />
         </div>
       </div>
-      <div className="container">
-        <BrowseByCategory />
-      </div>
+
+      <BrowseByCategory />
+
       <ReviwsSlider />
     </>
   );
