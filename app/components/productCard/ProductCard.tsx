@@ -88,11 +88,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                   {isFavorite ? <IoHeart /> : <IoMdHeartEmpty />}
                 </div>
               </aside>
-
               <div className="addToCartButton">
                 <button>Add To Cart</button>
               </div>
-
               <Image
                 className="firstPhoto"
                 width={295}
