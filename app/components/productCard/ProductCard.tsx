@@ -25,11 +25,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
   const router = useRouter();
 
   const handleGoToProduct = (e: MouseEvent<HTMLDivElement>) => {
-    if (
-      favoriteIconRef.current &&
-      favoriteIconRef.current.contains(e.target as Node)
-    )
-      return;
+    if (favoriteIconRef?.current?.contains(e.target as Node)) return;
+
     router.push(`/product/${Math.random()}`);
   };
 

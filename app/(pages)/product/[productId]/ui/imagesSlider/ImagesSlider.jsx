@@ -7,7 +7,7 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "./style.scss";
 
-export default function ImagesSlider() {
+export default function ImagesSlider({ productImages }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [height, setHeight] = useState(null);
   const displayedImage = useRef(null);
@@ -43,27 +43,17 @@ export default function ImagesSlider() {
           }
           modules={[FreeMode, Navigation, Thumbs]}
         >
-          <SwiperSlide>
-            <img src="/images/image 1.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 2.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 3.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 4.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 5.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 6.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 7.webp" />
-          </SwiperSlide>
+          {Array(8)
+            .fill(null)
+            .map((_, index) => {
+              return (
+                <>
+                  <SwiperSlide>
+                    <img src={`/images/image ${index + 1}.webp`} />
+                  </SwiperSlide>
+                </>
+              );
+            })}
         </Swiper>
         <Swiper
           spaceBetween={10}
@@ -74,27 +64,17 @@ export default function ImagesSlider() {
           className="displayedImage"
           style={{ height: "100%" }}
         >
-          <SwiperSlide>
-            <img src="/images/image 1.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 2.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 3.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 4.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 5.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 6.webp" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/image 7.webp" />
-          </SwiperSlide>
+          {Array(8)
+            .fill(null)
+            .map((_, index) => {
+              return (
+                <>
+                  <SwiperSlide>
+                    <img src={`/images/image ${index + 1}.webp`} />
+                  </SwiperSlide>
+                </>
+              );
+            })}
         </Swiper>
       </div>
     </>

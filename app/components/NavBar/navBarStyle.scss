@@ -8,9 +8,8 @@
 .navBar {
   width: 100%;
   position: relative;
-
   background-color: $whiteColor;
- 
+
   .container {
     display: grid;
     align-items: center;
@@ -25,6 +24,7 @@
       }
     }
     .menu {
+      
       ul {
         width: 100%;
         padding: 0px;
@@ -96,6 +96,7 @@
     }
   }
   .branchesList {
+    border-bottom: 2px solid $mainColor;
     display: none;
     width: 100%;
     position: absolute;
