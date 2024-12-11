@@ -3,29 +3,29 @@
 
 @media #{$mobileScreenSpecified} {
   .container {
-    max-width: 96% !important;
+    max-width: 94% !important;
   }
 }
 
 @media #{$tabletScreenSpecified} {
   .container {
-    max-width: 96% !important;
+    max-width: 92% !important;
   }
 }
 
 @media #{$laptopScreenSpecified} {
   .container {
-    max-width: 94% !important;
+    max-width: 90% !important;
   }
 }
 @media #{$desktopScreenSpecified} {
   .container {
-    max-width: 92% !important;
+    max-width: 88% !important;
   }
 }
 @media #{$tvScreenSpecified} {
   .container {
-    max-width: 90% !important;
+    max-width: 88% !important;
   }
 }
 @media #{$largeScreenSpecified} {

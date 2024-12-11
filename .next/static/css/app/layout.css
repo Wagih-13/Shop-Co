@@ -466,27 +466,27 @@ button:focus {
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @media (max-width: 480px) {
   .container {
-    max-width: 96% !important;
+    max-width: 94% !important;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
-    max-width: 96% !important;
+    max-width: 92% !important;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .container {
-    max-width: 94% !important;
+    max-width: 90% !important;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   .container {
-    max-width: 92% !important;
+    max-width: 88% !important;
   }
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
   .container {
-    max-width: 90% !important;
+    max-width: 88% !important;
   }
 }
 @media (min-width: 1401px) {
