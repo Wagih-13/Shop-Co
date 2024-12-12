@@ -448,12 +448,14 @@
 }
 .Infomations .pricingDetails .price .newPrice {
   font-size: 22px;
+  font-weight: bold;
 }
 .Infomations .pricingDetails .price .oldPrice {
   font-size: 20px;
   color: rgb(143, 143, 143);
   text-decoration: line-through;
   font-size: 16px;
+  font-weight: bold;
 }
 .Infomations .pricingDetails .price .sale {
   border: none;
@@ -465,6 +467,7 @@
   background-color: rgba(255, 51, 51, 0.2941176471);
   padding-inline: 8px 12px;
   color: #ff3333;
+  font-size: 14px;
 }
 .Infomations .pricingDetails .availabilityText {
   color: rgb(6, 139, 66);
@@ -576,6 +579,7 @@
   color: white;
   padding: 8px 12px;
   height: 40px;
+  overflow: hidden;
 }
 .Infomations .addToCart .editQuantity input {
   background-color: transparent;
@@ -610,6 +614,12 @@
 }
 .Infomations input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) {
+  .addToCart .editQuantity {
+    width: 130px !important;
+  }
 }
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./app/(pages)/product/[productId]/style.scss ***!
@@ -666,13 +676,16 @@
   }
 }
 @media (max-width: 768px) {
-  .productMainDetails {
+  .productDerails {
+    margin: 10px 0px 50px !important;
+  }
+  .productDerails .productMainDetails {
     flex-direction: column !important;
   }
-  .productMainDetails .productImages {
+  .productDerails .productMainDetails .productImages {
     width: 100% !important;
   }
-  .productMainDetails .productInfo {
+  .productDerails .productMainDetails .productInfo {
     width: 100% !important;
   }
 }

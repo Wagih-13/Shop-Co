@@ -24,18 +24,21 @@
       @include flexBox(flex-start, center, 10px);
       .newPrice {
         font-size: $xlFont;
+        font-weight: bold;
       }
       .oldPrice {
         font-size: $lFont;
         color: $grayColor;
         text-decoration: line-through;
         font-size: $mFont;
+        font-weight: bold;
       }
       .sale {
         @include borderBox(none, 20px);
         background-color: #ff33334b;
         padding-inline: 8px 12px;
         color: #ff3333;
+        font-size: $sFont;
       }
     }
     .availabilityText {
@@ -97,6 +100,7 @@
       }
     }
   }
+
   .addToCart {
     padding: 20px 0px;
     width: 100%;
@@ -109,6 +113,7 @@
       color: white;
       padding: 8px 12px;
       height: 40px;
+      overflow: hidden;
       input {
         background-color: transparent;
         outline: none;
@@ -142,7 +147,10 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .addToCart {
+    .editQuantity {
+      width: 130px !important;
+    }
   }
 }

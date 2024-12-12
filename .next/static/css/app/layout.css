@@ -506,19 +506,19 @@ button:focus {
   -o-transition: 0.5s;
 }
 
-.footer .container .subscribeBox > h2 {
+.footer .container .subscribeBox .subscribeBoxText {
   font-size: 48px;
   font-weight: 800;
   white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-  .footer .container .subscribeBox > h2 {
+  .footer .container .subscribeBox .subscribeBoxText {
     font-size: 42px !important;
   }
 }
 @media (max-width: 480px) {
-  .footer .container .subscribeBox > h2 {
+  .footer .container .subscribeBox .subscribeBoxText {
     font-size: 30px !important;
   }
 }
@@ -551,7 +551,7 @@ button:focus {
   align-items: center;
   gap: 20px;
 }
-.footer .container .subscribeBox > h2 {
+.footer .container .subscribeBox .subscribeBoxText {
   color: white;
   margin-bottom: 10px;
   width: 50%;
@@ -679,13 +679,13 @@ button:focus {
   .subscribeBox form {
     width: 100% !important;
   }
-  .subscribeBox > h2 {
+  .subscribeBox .subscribeBoxText {
     width: 100% !important;
     text-align: center;
   }
 }
 @media ( (max-width: 768px)) {
-  .subscribeBox > h2 {
+  .subscribeBox .subscribeBoxText {
     width: 100% !important;
     text-align: center;
   }

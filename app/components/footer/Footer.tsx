@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="subscribeBox">
-            <h2>Subscribe to Our Newsletter</h2>
+            <span className="subscribeBoxText">Subscribe to Our Newsletter</span>
             <form>
               <div className="inputBox">
                 <BsEnvelope />

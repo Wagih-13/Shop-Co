@@ -18,7 +18,7 @@
       @include borderBox(none, 20px);
       background-color: $secondaryColor;
       @include flexBox(space-between, center, 20px);
-      & > h2 {
+      .subscribeBoxText {
         color: $whiteColor;
         @extend %headeTitle;
         margin-bottom: 10px;
@@ -126,7 +126,7 @@
     form {
       width: 100% !important;
     }
-    & > h2 {
+    .subscribeBoxText {
       width: 100% !important;
       text-align: center;
     }
@@ -135,14 +135,13 @@
 
 @media ($tabletScreen) {
   .subscribeBox {
-    & > h2 {
+    .subscribeBoxText {
       width: 100% !important;
       text-align: center;
-
     }
   }
   .footerLinks {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important; 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
 
     column-gap: 10px !important;
     row-gap: 20px !important;

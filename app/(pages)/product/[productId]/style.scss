@@ -42,13 +42,16 @@
 }
 
 @media (max-width: 768px) {
-  .productMainDetails {
-    flex-direction: column !important;
-    .productImages {
-      width: 100% !important;
-    }
-    .productInfo {
-      width: 100% !important;
+  .productDerails {
+    margin: 10px 0px 50px !important;
+    .productMainDetails {
+      flex-direction: column !important;
+      .productImages {
+        width: 100% !important;
+      }
+      .productInfo {
+        width: 100% !important;
+      }
     }
   }
 }

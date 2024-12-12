@@ -22,7 +22,7 @@ const ProductInfo = () => {
           <div className="price">
             <span className="newPrice">$12.99</span>
             <span className="oldPrice">$15.99</span>
-            <span className="sale">Sale</span>
+            <span className="sale">-40%</span>
           </div>
           <div className="availability">
             <span className="availabilityText">In Stock</span>
