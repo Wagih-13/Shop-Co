@@ -703,8 +703,6 @@ button:focus {
 }
 @media ((max-width: 480px)) {
   .subscribeBox .subscribeBoxText {
-    width: 100% !important;
-    text-align: center;
-    font-size: 42px !important;
+    font-size: 30px !important;
   }
 }
