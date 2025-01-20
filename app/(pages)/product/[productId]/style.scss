@@ -2,7 +2,7 @@
 @use "../../../sass/pleacholder" as *;
 @use "../../../sass/variabels" as *;
 
-.productDerails {
+.productDetails {
   margin: 50px 0px;
   .productMainDetails {
     @include flexBox(center, flex-start, 40px);
@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 768px) {
-  .productDerails {
+  .productDetails {
     margin: 10px 0px 50px !important;
     .productMainDetails {
       flex-direction: column !important;

@@ -7,7 +7,7 @@
 .footer {
   background-color: $mainColor;
   padding: 20px 0;
-  margin-top: 200px;
+  margin-top: 250px;
   .container {
     @include flexBox(center, center, 30px, column);
     .subscribeBox {
@@ -20,11 +20,12 @@
       @include flexBox(space-between, center, 20px);
       .subscribeBoxText {
         color: $whiteColor;
-        @extend %headeTitle;
+        font-size: 48px;
+        font-weight: 800;
         margin-bottom: 10px;
         width: 50%;
-        text-wrap: wrap;
-        line-height: 1;
+        white-space: normal; // Replace text-wrap with white-space: normal
+        line-height: 1.5; // Adjust line-height as needed
       }
       form {
         width: 350px;
@@ -138,6 +139,7 @@
     .subscribeBoxText {
       width: 100% !important;
       text-align: center;
+      font-size: 42px !important;
     }
   }
   .footerLinks {
@@ -154,5 +156,15 @@
   }
   .copyRights {
     @include flexBox(center, center, 10px, column, initial, !important);
+  }
+}
+
+@media ($mobileScreen) {
+  .subscribeBox {
+    .subscribeBoxText {
+      width: 100% !important;
+      text-align: center;
+      font-size: 42px !important;
+    }
   }
 }

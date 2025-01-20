@@ -8,7 +8,9 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="subscribeBox">
-            <span className="subscribeBoxText">Subscribe to Our Newsletter</span>
+            <span className="subscribeBoxText">
+              Subscribe to Our Newsletter
+            </span>
             <form>
               <div className="inputBox">
                 <BsEnvelope />
@@ -18,7 +20,7 @@ const Footer = () => {
             </form>
           </div>
           <div className="footerLinks">
-            <ul className="logoSide">
+            <div className="logoSide">
               <Image width={150} height={25} src="/images/logo.webp" alt="" />
               <p>
                 We have clothes that suits your style and which you’re proud to
@@ -38,7 +40,7 @@ const Footer = () => {
                   <FaTwitter />
                 </a>
               </div>
-            </ul>
+            </div>
             <ul>
               <li className="titleHead">Company</li>
               <li>About</li>

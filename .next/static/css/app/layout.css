@@ -511,26 +511,10 @@ button:focus {
   -o-transition: 0.5s;
 }
 
-.footer .container .subscribeBox .subscribeBoxText {
-  font-size: 48px;
-  font-weight: 800;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .footer .container .subscribeBox .subscribeBoxText {
-    font-size: 42px !important;
-  }
-}
-@media (max-width: 480px) {
-  .footer .container .subscribeBox .subscribeBoxText {
-    font-size: 30px !important;
-  }
-}
 .footer {
   background-color: #f0f0f0;
   padding: 20px 0;
-  margin-top: 200px;
+  margin-top: 250px;
 }
 .footer .container {
   display: flex;
@@ -558,10 +542,12 @@ button:focus {
 }
 .footer .container .subscribeBox .subscribeBoxText {
   color: white;
+  font-size: 48px;
+  font-weight: 800;
   margin-bottom: 10px;
   width: 50%;
-  text-wrap: wrap;
-  line-height: 1;
+  white-space: normal;
+  line-height: 1.5;
 }
 .footer .container .subscribeBox form {
   width: 350px;
@@ -693,6 +679,7 @@ button:focus {
   .subscribeBox .subscribeBoxText {
     width: 100% !important;
     text-align: center;
+    font-size: 42px !important;
   }
   .footerLinks {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
@@ -712,5 +699,12 @@ button:focus {
     flex-direction: column !important;
     flex-wrap: initial !important;
     gap: 10px !important;
+  }
+}
+@media ((max-width: 480px)) {
+  .subscribeBox .subscribeBoxText {
+    width: 100% !important;
+    text-align: center;
+    font-size: 42px !important;
   }
 }
