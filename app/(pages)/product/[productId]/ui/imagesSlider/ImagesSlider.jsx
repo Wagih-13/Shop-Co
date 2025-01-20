@@ -54,7 +54,10 @@ export default function ImagesSlider({ productImages }) {
               return (
                 <Fragment key={index}>
                   <SwiperSlide>
-                    <img src={`/images/image ${index + 1}.webp`} />
+                    <img
+                      src={`/images/image ${index + 1}.webp`}
+                      alt="product"
+                    />
                   </SwiperSlide>
                 </Fragment>
               );
@@ -75,7 +78,10 @@ export default function ImagesSlider({ productImages }) {
               return (
                 <Fragment key={index}>
                   <SwiperSlide>
-                    <img src={`/images/image ${index + 1}.webp`} />
+                    <img
+                      src={`/images/image ${index + 1}.webp`}
+                      alt="product"
+                    />
                   </SwiperSlide>
                 </Fragment>
               );

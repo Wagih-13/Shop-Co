@@ -93,7 +93,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                 width={295}
                 height={300}
                 src="/images/image 2.webp"
-                alt="product"
+                alt={product.title}
               />
               <Image
                 className="secondPhoto"
@@ -101,7 +101,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ index, product }) => {
                 width={295}
                 height={300}
                 src="/images/image 3.webp"
-                alt="product"
+                alt={product.title}
               />
             </div>
             <div className="content">
